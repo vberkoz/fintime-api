@@ -61,6 +61,7 @@ const getItemsForDay = async (pk, date) => {
       ':pk': pk,
       ':skPrefix': `ACTIVITY#${date}`,
     },
+    ScanIndexForward: false  // This will return items in descending order (newest first)
   };
 
   try {
