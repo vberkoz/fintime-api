@@ -1,11 +1,8 @@
-const serverless = require('serverless-http');
-const app = require('./src/app');
+const serverless = require("serverless-http");
+const app = require("./dist/app").default;
 
-// Create the serverless handler
 const handler = serverless(app);
 
-// Export the handler function for AWS Lambda
 module.exports.handler = async (event, context) => {
-  // You can add any pre-processing logic here if needed
-  return await handler(event, context);
+    return await handler(event, context);
 };
